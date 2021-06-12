@@ -1,22 +1,25 @@
-import { createStore } from 'redux';
+import { createStore } from "redux";
 
 const counterReducer = (state, action) => {
-    if(action.type === 'increment') {
-        return {
-            counter: state.counter + 1
-        }
-    } else if(action.type === 'decrement') {
-        return {
-            counter: state.counter - 1
-        }
-    } else {
-        return state;
-    } 
-}
-
+  if (action.type === "increment") {
+    return {
+      counter: state.counter + 1,
+    };
+  } else if (action.type === "decrement") {
+    return {
+      counter: state.counter - 1,
+    };
+  } else if (action.type === "incrementBy5") {
+    return {
+      counter: state.counter + action.amount,
+    };
+  } else {
+    return state;
+  }
+};
 
 const store = createStore(counterReducer, {
-    counter: 0
+  counter: 0,
 });
 
 export default store;
