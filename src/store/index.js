@@ -11,8 +11,7 @@ const counterReducer = (state, action) => {
         }
     } else {
         return state;
-    }
-    
+    } 
 }
 
 
