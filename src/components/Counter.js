@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { counterActions } from '../store/index';
+import { counterActions } from '../store/counter';
 import { INCREMENT, DECREMENT, INCREMENT_BY_FIVE, TOGGLE } from '../Constants';
 
 
